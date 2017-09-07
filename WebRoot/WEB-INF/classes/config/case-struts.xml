@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="caseindex.case" extends="struts-default" >
+        <action name="caseList" class="com.caseindex.action.CaseListAction" method="getCaseList">
+            <result name="caseList">/page/caseindex.jsp</result>      
+        </action>    
+        <action name="addList" class="com.caseindex.action.CaseListAction" method="addCaseList">
+           <!--   <result name="returnList" type="redirectAction">caseList?pageIndex=${pageIndex}</result>  -->
+            <result name="returnList" type="redirectAction">caseList?pageIndex=${pageIndex}</result>
+        </action>
+    </package>  
+</struts>                             
